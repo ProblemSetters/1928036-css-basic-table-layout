@@ -1,0 +1,20 @@
+version: 1.0
+configuration:
+  has_webserver: true
+  readonly_paths:
+    - test/*
+    - src/index.js
+    - src/index.html
+    - app.js
+  scoring:
+    command: "npm test"
+    files:
+      - junit.xml
+  ide_config:
+    default_open_files:
+      - src/index.html
+      - src/css/style.css
+    project_menu:
+      run: npm start
+      install: npm install
+      test: npm test
